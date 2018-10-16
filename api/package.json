@@ -1,0 +1,45 @@
+{
+  "name": "apollo-upload-examples-api",
+  "private": true,
+  "engines": {
+    "node": ">=8.6"
+  },
+  "dependencies": {
+    "apollo-server-koa": "^2.0.0",
+    "dotenv": "^6.0.0",
+    "graphql": "^0.13.2",
+    "koa": "^2.5.2",
+    "lowdb": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "promises-all": "^1.0.0",
+    "shortid": "^2.2.12"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-env": "^1.0.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "nodemon": "^1.18.3",
+    "prettier": "^1.14.2"
+  },
+  "scripts": {
+    "lint": "eslint . --ext mjs --fix && prettier '**/*.{json,md}' --write",
+    "dev": "nodemon --ext mjs",
+    "start": "node --experimental-modules -r dotenv/config server.mjs"
+  },
+  "eslintConfig": {
+    "extends": [
+      "env"
+    ],
+    "rules": {
+      "require-jsdoc": "off"
+    }
+  },
+  "prettier": {
+    "proseWrap": "never",
+    "singleQuote": true,
+    "semi": false
+  }
+}
